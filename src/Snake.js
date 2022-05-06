@@ -1,4 +1,4 @@
-function Snake(props) {
+export default (props) => {
   return (
     <div>
       {props.snakeDots.map((dot, i) => {
@@ -10,6 +10,4 @@ function Snake(props) {
       })}
     </div>
   );
-}
-
-export default Snake;
+};

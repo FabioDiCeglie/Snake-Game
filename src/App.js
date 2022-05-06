@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Snake from "./Snake";
+import Food from "./Food";
 
 function App() {
   const [state] = useState({
+    food: [6, 8],
     snakeDots: [
       [0, 0],
       [2, 0],
@@ -11,6 +13,7 @@ function App() {
   return (
     <div className="game-area">
       <Snake snakeDots={state.snakeDots} />
+      <Food dot={state.food} />
     </div>
   );
 }

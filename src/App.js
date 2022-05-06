@@ -114,6 +114,14 @@ class App extends Component {
     });
   }
 
+  increaseSpeed() {
+    if (this.state.speed > 10) {
+      this.setState({
+        speed: this.state.speed - 10,
+      });
+    }
+  }
+
   onGameOver() {
     alert(`Game Over. Snake length is ${this.state.snakeDots.length}`);
     this.setState(initialState);

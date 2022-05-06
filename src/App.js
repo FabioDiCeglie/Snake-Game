@@ -106,6 +106,14 @@ class App extends Component {
     }
   }
 
+  enlargeSnake() {
+    let newSnake = [...this.state.snakeDots];
+    newSnake.unshift([]);
+    this.setState({
+      snakeDots: newSnake,
+    });
+  }
+
   onGameOver() {
     alert(`Game Over. Snake length is ${this.state.snakeDots.length}`);
     this.setState(initialState);

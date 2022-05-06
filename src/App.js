@@ -1,5 +1,5 @@
 function App() {
-  return <div></div>;
+  return <div className="game-area"></div>;
 }
 
 export default App;

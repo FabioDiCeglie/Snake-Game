@@ -13,7 +13,7 @@ const getRandomCoordinates = () => {
 
 const initialState = {
   food: getRandomCoordinates(),
-  speed: 200,
+  speed: 100,
   direction: "RIGHT",
   snakeDots: [
     [0, 0],
@@ -114,11 +114,10 @@ class App extends Component {
       snakeDots: newSnake,
     });
   }
-
   increaseSpeed() {
-    if (this.enlargeSnake()) {
+    if (this.state.speed > 10) {
       this.setState({
-        speed: this.state.speed + 10,
+        speed: this.state.speed - 10,
       });
     }
   }
